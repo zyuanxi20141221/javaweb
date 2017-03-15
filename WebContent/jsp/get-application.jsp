@@ -3,12 +3,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>表单提交</title>
+<title>application内置对象</title>
 </head>
 <body>
-<form id="login" method="POST" action="jsp-forward.jsp">
-    <input type="text" name="username"/>
-    <input type="submit" value="login"/>
-</form>
+<!-- 输出application内置对象中的变量值 -->
+<%=application.getAttribute("counter") %>
 </body>
 </html>

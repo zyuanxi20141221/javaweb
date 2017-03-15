@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>forward</title>
+<title>jsp-include测试，传入参数</title>
 </head>
 <body>
-	<jsp:forward page="forward-result.jsp">
-		<jsp:param value="29" name="age" />
-		<jsp:param value='<%=request.getParameter("username") %>' name="name" />
-    </jsp:forward>
+	<jsp:include page="forward-result.jsp">
+        <jsp:param value="30" name="age"/>
+	</jsp:include>
 </body>
 </html>

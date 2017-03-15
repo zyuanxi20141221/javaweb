@@ -6,6 +6,8 @@
 <title>error page</title>
 </head>
 <body>
-出错了!!!
+出错了!!!<br/>
+异常类型:<%=exception.getClass() %><br/>
+异常信息:<%=exception.getMessage() %><br/>
 </body>
 </html>

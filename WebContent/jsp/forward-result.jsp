@@ -6,6 +6,7 @@
 <title>forward-result page</title>
 </head>
 <body>
-<%=request.getParameter("age") %>
+<%=request.getParameter("age") %><br/>
+<%=request.getParameter("name") %>
 </body>
 </html>
