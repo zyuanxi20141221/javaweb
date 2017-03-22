@@ -3,10 +3,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>jsp-include测试</title>
+<title>增加cookie</title>
 </head>
 <body>
-<!-- 动态包含 -->
-<jsp:include page="scriptlet.jsp" />
+<%
+   String name = request.getParameter("name");
+   Cookie c = new Cookie("username",name);
+   c.setMaxAge(24*3600);
+   response.addCookie(c);
+%>
 </body>
 </html>

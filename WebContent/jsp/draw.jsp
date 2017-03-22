@@ -3,10 +3,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>jsp-include测试</title>
+<title>取钱的表单页</title>
 </head>
 <body>
-<!-- 动态包含 -->
-<jsp:include page="scriptlet.jsp" />
+<form method = "POST" action="first.jsp">
+取钱：<input type="text" name="balance">
+    <input type="submit" value="提交">
+</form>
 </body>
 </html>
