@@ -7,7 +7,7 @@
 <title>login</title>
 </head>
 <body>
-<s:form action="login">
+<s:form action="login" method="post">
    <s:textfield name="username" key="login.user"/>
    <s:textfield name="password" key="login.pass"/>
    <s:submit key="login.login"/>
