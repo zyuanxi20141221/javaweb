@@ -3,10 +3,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>jsp-include测试</title>
+<title>读取Cookie</title>
 </head>
 <body>
-<!-- 动态包含 -->
-<jsp:include page="scriptlet.jsp" />
+<%
+   Cookie[] cookies = request.getCookies();
+   for(Cookie item : cookies){
+	   if(item.getName().equals("username")){
+		   out.println(item.getValue());
+	   }
+   }
+%>
 </body>
 </html>
