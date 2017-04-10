@@ -3,14 +3,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>增加cookie</title>
+<title>welcome</title>
 </head>
 <body>
-	<%
-		String name = request.getParameter("name");
-		Cookie c = new Cookie("username", name);
-		c.setMaxAge(24 * 3600);
-		response.addCookie(c);
-	%>
+欢迎<%=request.getAttribute("username") %>
 </body>
 </html>
