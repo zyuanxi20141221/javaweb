@@ -13,15 +13,6 @@
     	String headName = headerNames.nextElement();
     	out.println(headName + "--->" + request.getHeader(headName) + "<br/>");
     }
-    out.println("<hr/>");
-    request.setCharacterEncoding("gb2312");
-    
-    String name = request.getParameter("name");
-    String gender = request.getParameter("gender");
-    String color = request.getParameter("color");
-    String country = request.getParameter("country");
-    
-    
 %>
 
 <title>获取请求头/请求参数</title>
@@ -30,6 +21,7 @@
 <% 
   request.setCharacterEncoding("utf-8");
   out.println("<hr/>");
+  
   String _name = request.getParameter("name");
   String _gender = request.getParameter("gender");
   String[] _color = request.getParameterValues("color");
