@@ -6,10 +6,8 @@
 <title>welcome</title>
 </head>
 <body>
-<<<<<<< HEAD
-欢迎<%=request.getAttribute("username") %>
-=======
-欢迎:${user}
->>>>>>> 58efcc6315c8c1399eafd07a0934bc2d3567d358
+本站访问次数为：${applicationScope.counter}<br/>
+欢迎:${sessionScope.user}<br/>
+${requestScope.tip}<br/>
 </body>
 </html>
