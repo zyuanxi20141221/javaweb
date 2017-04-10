@@ -4,21 +4,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>接收请求头/请求参数</title>
+</head>
+<body>
+<%
+    Enumeration<String> headerNames = request.getHeaderNames();
+    while(headerNames.hasMoreElements()){
+    	String headName = headerNames.nextElement();
+    	out.println(headName + "--->" + request.getHeader(headName) + "<br/>");
+    }
+%>
+
 <title>获取请求头/请求参数</title>
 </head>
 <body>
 <% 
   request.setCharacterEncoding("utf-8");
   out.println("<hr/>");
-  String name = request.getParameter("name");
-  String gender = request.getParameter("gender");
-  String[] color = request.getParameterValues("color");
-  String country = request.getParameter("country");
+  
+  String _name = request.getParameter("name");
+  String _gender = request.getParameter("gender");
+  String[] _color = request.getParameterValues("color");
+  String _country = request.getParameter("country");
 %>
-您的姓名:<%=name %><br/>
-您的性别：<%=gender %><br/>
-您喜欢的颜色：<%for(String c : color){
+您的姓名:<%=_name %><br/>
+您的性别：<%=_gender %><br/>
+您喜欢的颜色：<%for(String c : _color){
 	out.println(c +  " ");}%><br/>
-您来自的国家：<%=country %>
+您来自的国家：<%=_country %>
 </body>
 </html>
