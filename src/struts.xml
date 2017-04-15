@@ -15,7 +15,7 @@
         <default-action-ref name="index" />
 
         <global-results>
-            <result name="error">/WEB-INF/jsp/error.jsp</result>
+            <result name="success">/jsp/error.jsp</result>
         </global-results>
 
         <global-exception-mappings>
@@ -26,6 +26,13 @@
             <result name="input">/jsp/login.jsp</result>
             <result name="success">/jsp/welcome.jsp</result>
             <result name="error">/jsp/error_page.jsp</result>
+        </action>
+        
+        <action name="plain" class="action.UserAction">
+            <result name="success" type="plainText">
+                <param name="location">/jsp/plaintext.jsp</param>
+                <param name="charSet">utf-8</param>
+            </result>
         </action>
     </package>
 
